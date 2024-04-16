@@ -23,18 +23,8 @@
 /* Includes ---------------------------------------------------------------- */
 #include <test_inferencing.h>
 #include "edge-impulse-sdk/dsp/image/image.hpp"
-#include <WebServer.h>
-#include <WiFi.h>
-#include <HTTPClient.h>
-
 #include "esp_camera.h"
 
-
-const char* WIFI_SSID = "Fauzan iPhone";
-const char* WIFI_PASS = "protakwim";
-
-
-WebServer server(80);
 
 
 // Select camera model - find more camera models in camera_pins.h file here
@@ -137,43 +127,7 @@ bool ei_camera_capture(uint32_t img_width, uint32_t img_height, uint8_t *out_buf
 
 
 
-// Capture JPG file
-void serveJpg()
-{
-  // auto frame = esp32cam::capture();
-  // if (frame == nullptr) {
-  //   Serial.println("CAPTURE FAIL");
-  //   server.send(503, "", "");
-  //   return;
-  // }
-  // Serial.printf("CAPTURE OK %dx%d %db\n", frame->getWidth(), frame->getHeight(),
-  //               static_cast<int>(frame->size()));
-  Serial.println("Server JPG");
-  snapshot_buf = (uint8_t*)malloc(EI_CAMERA_RAW_FRAME_BUFFER_COLS * EI_CAMERA_RAW_FRAME_BUFFER_ROWS * EI_CAMERA_FRAME_BYTE_SIZE);
 
-    // check if allocation was successful
-    if(snapshot_buf == nullptr) {
-        ei_printf("ERR: Failed to allocate snapshot buffer!\n");
-        return;
-    }
-
-    ei::signal_t signal;
-    signal.total_length = EI_CLASSIFIER_INPUT_WIDTH * EI_CLASSIFIER_INPUT_HEIGHT;
-    signal.get_data = &ei_camera_get_data;
-
-    if (ei_camera_capture((size_t)EI_CLASSIFIER_INPUT_WIDTH, (size_t)EI_CLASSIFIER_INPUT_HEIGHT, snapshot_buf) == false) {
-        ei_printf("Failed to capture image\r\n");
-        free(snapshot_buf);
-        return;
-    }
-
-  server.setContentLength(signal.total_length);
-  server.send(200, "image/jpeg");
-  WiFiClient client = server.client();
-  // snapshot_buf->writeTo(client);
-  client.write(snapshot_buf,signal.total_length);
-
-}
 
 
 /**
@@ -192,21 +146,6 @@ void setup()
     else {
         ei_printf("Camera initialized\r\n");
     }
-    
-  // WiFi.persistent(false);
-  // WiFi.mode(WIFI_STA);
-  // WiFi.begin(WIFI_SSID, WIFI_PASS);
-  // while (WiFi.status() != WL_CONNECTED) {
-  //   delay(500);
-  // }
-  // Serial.print("http://");
-  // Serial.print(WiFi.localIP());
-  // Serial.println("/cam.jpg");
- 
-  // server.on("/cam.jpg", serveJpg);
-
- 
-  // server.begin();
 
     ei_printf("\nSend 'a' through serial port to start inference...\n");
     ei_sleep(2000);
@@ -220,7 +159,6 @@ void setup()
 void loop()
 {
 
-  // server.handleClient();
     if (Serial.available()>0)
     {
         if (Serial.read()=='a')
