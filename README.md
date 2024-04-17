@@ -33,7 +33,7 @@ This is an AI Image Classification using Edge Impulse as model training and ESP3
 
 5.  Open Serial Port in Arduino IDE to check the IP Address of the ESP32Cam
 
-6.  Copy and Paste the IP Address to web browser(Chrome/Edge) address bar
+6.  Ensure you are using the same Wifi. Copy and Paste the IP Address to web browser(Chrome/Edge) address bar
 
 7.  Point the camera towards the first image (class1), then Click Start Collecting. Repeat the process for all classes required. 
 
