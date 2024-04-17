@@ -168,7 +168,7 @@ Any additional information goes here
 
 <!-- ![Logo](https://tinkercode.my/app/wp-content/uploads/2022/11/TinkerCodeLogoCircle-768x802.png =250x250) -->
 
-<img src="https://tinkercode.my/app/wp-content/uploads/2022/11/TinkerCodeLogoCircle-768x802.png" width=50% height=50%>
+<img src="https://tinkercode.my/app/wp-content/uploads/2022/11/TinkerCodeLogoCircle-768x802.png" width=20% height=20%>
 
 ## License
 
