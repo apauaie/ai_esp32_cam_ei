@@ -24,7 +24,7 @@ This is an AI Image Classification using Edge Impulse as model training and ESP3
 
 1.  Install EloquentESP32Cam library in Arduino IDE
 
-![alt text](https://github.com/apauaie/ai_esp32_cam_ei/blob/main/1InstallEloquentESP32Cam.png?raw=true)
+![alt text](https://github.com/apauaie/ai_esp32_cam_ei/blob/main/media/1InstallEloquentESP32Cam.png?raw=true)
 
 
 2.  Open Examples->EloquentESP32Cam->Collect_images_for_EdgeImpulse
