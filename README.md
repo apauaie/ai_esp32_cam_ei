@@ -166,7 +166,7 @@ Any additional information goes here
 - [@apauaie](https://www.github.com/apauaie)
 
 
-![Logo](https://tinkercode.my/app/wp-content/uploads/2022/11/TinkerCodeLogoCircle-768x802.png)
+![Logo](https://tinkercode.my/app/wp-content/uploads/2022/11/TinkerCodeLogoCircle-768x802.png=250x250)
 
 
 ## License
