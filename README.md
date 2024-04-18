@@ -117,7 +117,7 @@ This is an AI Image Classification using Edge Impulse as model training and ESP3
 
 
 
-## 19. Open and Upload the file esp32_camera_rbtx.ino. This is modified from original EdgeImpulse Arduino Library. You can modify the detection threshold in this file.
+## 19. Open and Upload the file esp32_camera_rbtx.ino. This is modified from original EdgeImpulse Arduino Library. You can modify the detection threshold in this file. Change test_inferencing.h to your own library name.
 
 ![alt text](https://github.com/apauaie/ai_esp32_cam_ei/blob/main/media/19_Modify_threshold.png?raw=true)
 
@@ -129,7 +129,7 @@ This is an AI Image Classification using Edge Impulse as model training and ESP3
 
 
 
-## 21. Unplug USB connection to ESP32Camp. Make connection from ESP32Cam to Arduino Nano/ Mechabot Rush. VCC to 5V, GND to GND, TX(GPIO1) to RX(Pin 4), RX(GPIO3) to TX(Pin 7). Ensure servo in connected to Pin 8 on Rush.
+## 21. Unplug USB connection to ESP32Camp. Make connection from ESP32Cam to Arduino Nano/ Mechabot Rush. VCC to 5V, GND to GND, TX(GPIO1) to RX(Pin 1), RX(GPIO3) to TX(Pin 4). Ensure servo in connected to Pin 8 on Rush.
 
 
 
