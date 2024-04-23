@@ -129,7 +129,7 @@ This is an AI Image Classification using Edge Impulse as model training and ESP3
 
 
 
-## 21. Unplug USB connection to ESP32Camp. Make connection from ESP32Cam to Arduino Nano/ Mechabot Rush. VCC to 5V, GND to GND, TX(GPIO1) to RX(Pin 1), RX(GPIO3) to TX(Pin 4). Ensure servo in connected to Pin 8 on Rush.
+## 21. Unplug USB connection to ESP32Camp. Make connection from ESP32Cam to Arduino Nano/ Mechabot Rush. VCC to 5V, GND to GND, TX(GPIO1) to RX(Pin 7), RX(GPIO3) to TX(Pin 4). Ensure servo in connected to Pin 8 on Rush.
 
 
 
