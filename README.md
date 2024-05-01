@@ -81,7 +81,7 @@ This is an AI Image Classification using Edge Impulse as model training and ESP3
 
 
 
-## 13. Select RGB, then Save Parameters and Generate Features in the Impulse Design-> Image menu
+## 13. Select Grayscale, then Save Parameters and Generate Features in the Impulse Design-> Image menu
 
 ![alt text](https://github.com/apauaie/ai_esp32_cam_ei/blob/main/media/13_Complete_Generate.png?raw=true)
 
