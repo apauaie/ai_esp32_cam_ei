@@ -21,7 +21,7 @@
  */
 
 /* Includes ---------------------------------------------------------------- */
-#include <test_inferencing.h>
+#include <rbtx_test_inferencing.h>
 #include "edge-impulse-sdk/dsp/image/image.hpp"
 #include "esp_camera.h"
 
@@ -112,10 +112,10 @@ static camera_config_t camera_config = {
     .pixel_format = PIXFORMAT_JPEG, //YUV422,GRAYSCALE,RGB565,JPEG
     .frame_size = FRAMESIZE_QVGA,    //QQVGA-UXGA Do not use sizes above QVGA when not JPEG
 
-    .jpeg_quality = 33, //0-63 lower number means higher quality
+    .jpeg_quality = 20, //0-63 lower number means higher quality
     .fb_count = 1,       //if more than one, i2s runs in continuous mode. Use only with JPEG
     .fb_location = CAMERA_FB_IN_PSRAM,
-    .grab_mode = CAMERA_GRAB_WHEN_EMPTY,
+    .grab_mode = CAMERA_GRAB_LATEST ,//CAMERA_GRAB_WHEN_EMPTY,CAMERA_GRAB_LATEST 
 };
 
 
@@ -164,10 +164,10 @@ void loop()
         if (Serial.read()=='a')
         {
 
-    // instead of wait_ms, we'll wait on the signal, this allows threads to cancel us...
-    if (ei_sleep(5) != EI_IMPULSE_OK) {
-        return;
-    }
+    // // instead of wait_ms, we'll wait on the signal, this allows threads to cancel us...
+    // if (ei_sleep(5) != EI_IMPULSE_OK) {
+    //     return;
+    // }
 
     snapshot_buf = (uint8_t*)malloc(EI_CAMERA_RAW_FRAME_BUFFER_COLS * EI_CAMERA_RAW_FRAME_BUFFER_ROWS * EI_CAMERA_FRAME_BYTE_SIZE);
     
@@ -216,6 +216,7 @@ void loop()
     String final_results="non";
     float threshold=0.8;
     for (size_t ix = 0; ix < EI_CLASSIFIER_LABEL_COUNT; ix++) {
+        //Serial.println(ix);
         //ei_printf("    %s: %.5f\n", result.classification[ix].label,result.classification[ix].value);
         if (result.classification[ix].value>=threshold) 
         {
@@ -230,9 +231,15 @@ void loop()
     Serial.println(final_results);
 
     free(snapshot_buf);
+    //ESP.restart();
+
+
+
+    
         }
 
     }
+    
     
 }
 
