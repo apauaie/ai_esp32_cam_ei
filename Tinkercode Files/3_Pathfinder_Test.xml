@@ -1,5 +1,5 @@
 <xml xmlns="https://developers.google.com/blockly/xml">
-  <toolboxcategories xmlns="http://www.w3.org/1999/xhtml">&#10;    CAT_LOGIC,CAT_LOOPS,CAT_MATH,CAT_ARRAY,CAT_TEXT,CAT_COLOR,CAT_VARIABLES,CAT_FUNCTIONS,CAT_KIT,CAT_BOT,CAT_EXTENSIONS</toolboxcategories>
+  <toolboxcategories xmlns="http://www.w3.org/1999/xhtml">CAT_LOGIC,CAT_LOOPS,CAT_MATH,CAT_ARRAY,CAT_TEXT,CAT_COLOR,CAT_VARIABLES,CAT_FUNCTIONS,CAT_KIT,CAT_BOT</toolboxcategories>
   <variables>
     <variable id="B3kjKyL.K0,dgwL#**%C">result</variable>
     <variable id=";v3bbu!y)H,JDz;=*3+R">class1</variable>
@@ -322,6 +322,442 @@
                                         <field name="NUM">0.02</field>
                                       </block>
                                     </value>
+                                    <next>
+                                      <block type="rush_line_follow_junction" id="cEb7iM/1grMgDkH]?8wj">
+                                        <field name="line">1</field>
+                                        <field name="junction">0</field>
+                                        <field name="action">forward</field>
+                                        <comment pinned="false" h="80" w="160">end junction1</comment>
+                                        <value name="Speed">
+                                          <block type="math_number" id="b;Bj,WRrEb{Xq#RNX1,r">
+                                            <field name="NUM">50</field>
+                                          </block>
+                                        </value>
+                                        <value name="Timer_forward">
+                                          <block type="math_number" id="NY-b[=8GrF:tS*?2iVs#">
+                                            <field name="NUM">50</field>
+                                          </block>
+                                        </value>
+                                        <value name="Speed_action">
+                                          <block type="math_number" id="`^HLn]IssB)vo:ZQu!nW">
+                                            <field name="NUM">50</field>
+                                          </block>
+                                        </value>
+                                        <value name="Timer_action">
+                                          <block type="math_number" id="p_Zh@_5?MBLe..AsUTES">
+                                            <field name="NUM">0</field>
+                                          </block>
+                                        </value>
+                                        <value name="Kp">
+                                          <block type="math_number" id=")Os+]osx|Vma:Qk%=ywl">
+                                            <field name="NUM">0.01</field>
+                                          </block>
+                                        </value>
+                                        <value name="Kd">
+                                          <block type="math_number" id="`hGj=Nl}9nX7MedYP9G`">
+                                            <field name="NUM">0.02</field>
+                                          </block>
+                                        </value>
+                                        <next>
+                                          <block type="procedures_callnoreturn" id="(Xuuv]|nD-3jJIdpSXW%">
+                                            <mutation xmlns="http://www.w3.org/1999/xhtml" name="grip_on_detect">
+                                              <arg name="klas"></arg>
+                                            </mutation>
+                                            <value name="ARG0">
+                                              <block type="variables_get" id="v-u},VGDpn9.nKGe7[;(">
+                                                <field name="VAR" id="J!(B,gnrI?:Uo|LLdy(c">class2</field>
+                                              </block>
+                                            </value>
+                                            <next>
+                                              <block type="rush_drive" id="vYwum/6[+LTym+A~jL8L">
+                                                <field name="DIRL">backward</field>
+                                                <field name="DIRR">backward</field>
+                                                <value name="SPEEDL">
+                                                  <block type="math_number" id="C%(wc@e.GK/{=SlI7,,q">
+                                                    <field name="NUM">50</field>
+                                                  </block>
+                                                </value>
+                                                <value name="SPEEDR">
+                                                  <block type="math_number" id="%VO7Da.tk7F[vP:Qlv(;">
+                                                    <field name="NUM">50</field>
+                                                  </block>
+                                                </value>
+                                                <next>
+                                                  <block type="base_delay" id="mw8w1{PX_ReLA%s*@^lm">
+                                                    <value name="DELAY_TIME">
+                                                      <shadow type="math_number" id="1BJVmD+jF$x732*g6tNY">
+                                                        <field name="NUM">500</field>
+                                                      </shadow>
+                                                    </value>
+                                                    <next>
+                                                      <block type="rush_drive" id="]60w+@.U{iu^wAKs*+@I">
+                                                        <field name="DIRL">forward</field>
+                                                        <field name="DIRR">backward</field>
+                                                        <comment pinned="false" h="80" w="160">kanan</comment>
+                                                        <value name="SPEEDL">
+                                                          <block type="math_number" id="#^Y8QIV.Lzt$cWm3*^9#">
+                                                            <field name="NUM">60</field>
+                                                          </block>
+                                                        </value>
+                                                        <value name="SPEEDR">
+                                                          <block type="math_number" id="^L.7J5*cWO3xwpX|dvBc">
+                                                            <field name="NUM">50</field>
+                                                          </block>
+                                                        </value>
+                                                        <next>
+                                                          <block type="base_delay" id="L`L6;oEwdEUnvz4*-lu8">
+                                                            <value name="DELAY_TIME">
+                                                              <shadow type="math_number" id="p.%5JN$k9UP1K$JA=V36">
+                                                                <field name="NUM">400</field>
+                                                              </shadow>
+                                                            </value>
+                                                            <next>
+                                                              <block type="rush_line_follow_junction" id="kVKBy--U|v!tZ{(qiGO=">
+                                                                <field name="line">1</field>
+                                                                <field name="junction">1</field>
+                                                                <field name="action">leftatC</field>
+                                                                <comment pinned="false" h="80" w="160">end junction1</comment>
+                                                                <value name="Speed">
+                                                                  <block type="math_number" id="Zif!iBR_$4+H[J*4V(Qx">
+                                                                    <field name="NUM">50</field>
+                                                                  </block>
+                                                                </value>
+                                                                <value name="Timer_forward">
+                                                                  <block type="math_number" id="7Oxf(Atbeg#Zz0v*iuus">
+                                                                    <field name="NUM">50</field>
+                                                                  </block>
+                                                                </value>
+                                                                <value name="Speed_action">
+                                                                  <block type="math_number" id="_LUUT;9`}aTUzfS@hISb">
+                                                                    <field name="NUM">50</field>
+                                                                  </block>
+                                                                </value>
+                                                                <value name="Timer_action">
+                                                                  <block type="math_number" id=",CTBu+@vTUN7z}7K)f^8">
+                                                                    <field name="NUM">50</field>
+                                                                  </block>
+                                                                </value>
+                                                                <value name="Kp">
+                                                                  <block type="math_number" id="ndH^s)`/u|Tl7CzkJwUh">
+                                                                    <field name="NUM">0.01</field>
+                                                                  </block>
+                                                                </value>
+                                                                <value name="Kd">
+                                                                  <block type="math_number" id="xcoxD/{i%8q=XoZn;iTF">
+                                                                    <field name="NUM">0.02</field>
+                                                                  </block>
+                                                                </value>
+                                                                <next>
+                                                                  <block type="rush_line_follow_junction" id="^BZmZ|=|tBgNnm:x,DU*">
+                                                                    <field name="line">1</field>
+                                                                    <field name="junction">0</field>
+                                                                    <field name="action">leftatC</field>
+                                                                    <comment pinned="false" h="80" w="160">end junction1</comment>
+                                                                    <value name="Speed">
+                                                                      <block type="math_number" id=".Eq]x/Di9`/oO.AUY}Si">
+                                                                        <field name="NUM">45</field>
+                                                                      </block>
+                                                                    </value>
+                                                                    <value name="Timer_forward">
+                                                                      <block type="math_number" id="[OE]Ids=jP_Dy2rs#rst">
+                                                                        <field name="NUM">50</field>
+                                                                      </block>
+                                                                    </value>
+                                                                    <value name="Speed_action">
+                                                                      <block type="math_number" id="!MiRf*Pp;z?;CBZ];%_;">
+                                                                        <field name="NUM">50</field>
+                                                                      </block>
+                                                                    </value>
+                                                                    <value name="Timer_action">
+                                                                      <block type="math_number" id="NFnqkvs8,l)N=pg%z5X{">
+                                                                        <field name="NUM">200</field>
+                                                                      </block>
+                                                                    </value>
+                                                                    <value name="Kp">
+                                                                      <block type="math_number" id="zG.kn!MPRGJF*+fKn{a!">
+                                                                        <field name="NUM">0.01</field>
+                                                                      </block>
+                                                                    </value>
+                                                                    <value name="Kd">
+                                                                      <block type="math_number" id="$(Dr@|^M_y2lE+CiIB0N">
+                                                                        <field name="NUM">0.02</field>
+                                                                      </block>
+                                                                    </value>
+                                                                    <next>
+                                                                      <block type="rush_line_follow_junction" id="NGM-oL`}e3G@/qkAQPW}">
+                                                                        <field name="line">1</field>
+                                                                        <field name="junction">0</field>
+                                                                        <field name="action">forward</field>
+                                                                        <comment pinned="false" h="80" w="160">end junction1</comment>
+                                                                        <value name="Speed">
+                                                                          <block type="math_number" id="eg373BHNPyPBrKc=6S}5">
+                                                                            <field name="NUM">50</field>
+                                                                          </block>
+                                                                        </value>
+                                                                        <value name="Timer_forward">
+                                                                          <block type="math_number" id="Cz##.SuB|{jDIbgx}W{=">
+                                                                            <field name="NUM">50</field>
+                                                                          </block>
+                                                                        </value>
+                                                                        <value name="Speed_action">
+                                                                          <block type="math_number" id="L|~5WD6J{FzHVfJP]Ybn">
+                                                                            <field name="NUM">50</field>
+                                                                          </block>
+                                                                        </value>
+                                                                        <value name="Timer_action">
+                                                                          <block type="math_number" id="%Zc;.TSpAxM9Chh5LCiG">
+                                                                            <field name="NUM">0</field>
+                                                                          </block>
+                                                                        </value>
+                                                                        <value name="Kp">
+                                                                          <block type="math_number" id="iEW(84q!NIg+s/zPoy%Y">
+                                                                            <field name="NUM">0.01</field>
+                                                                          </block>
+                                                                        </value>
+                                                                        <value name="Kd">
+                                                                          <block type="math_number" id="?+N!gWke+*T-8l/NF:{V">
+                                                                            <field name="NUM">0.02</field>
+                                                                          </block>
+                                                                        </value>
+                                                                        <next>
+                                                                          <block type="procedures_callnoreturn" id="/q9c5w6*(.C3Md6*A{V4">
+                                                                            <mutation xmlns="http://www.w3.org/1999/xhtml" name="grip_on_detect">
+                                                                              <arg name="klas"></arg>
+                                                                            </mutation>
+                                                                            <value name="ARG0">
+                                                                              <block type="variables_get" id="/wXq(P,D2B-Jw8;dh]+_">
+                                                                                <field name="VAR" id="J!(B,gnrI?:Uo|LLdy(c">class2</field>
+                                                                              </block>
+                                                                            </value>
+                                                                            <next>
+                                                                              <block type="rush_drive" id="_w0({YI)4++LpPDOujI+">
+                                                                                <field name="DIRL">forward</field>
+                                                                                <field name="DIRR">backward</field>
+                                                                                <value name="SPEEDL">
+                                                                                  <block type="math_number" id="79G.HG=qDppFop.Ni4RK">
+                                                                                    <field name="NUM">50</field>
+                                                                                  </block>
+                                                                                </value>
+                                                                                <value name="SPEEDR">
+                                                                                  <block type="math_number" id="N{Tc3#CM`cM})YbR[Eux">
+                                                                                    <field name="NUM">50</field>
+                                                                                  </block>
+                                                                                </value>
+                                                                                <next>
+                                                                                  <block type="base_delay" id="{$Uh!dk7$Kvg)~i$N[gS">
+                                                                                    <value name="DELAY_TIME">
+                                                                                      <shadow type="math_number" id="4g.Ym},OR645[1=7?RSB">
+                                                                                        <field name="NUM">1008</field>
+                                                                                      </shadow>
+                                                                                    </value>
+                                                                                    <next>
+                                                                                      <block type="rush_stop" id="$Xpa8v/3CGS@Iob%!EzS">
+                                                                                        <next>
+                                                                                          <block type="base_delay" id="[njp}n;dr6torEjETpCg">
+                                                                                            <value name="DELAY_TIME">
+                                                                                              <shadow type="math_number" id="H#tj0$07/|Aa6J[fj4x+">
+                                                                                                <field name="NUM">1000</field>
+                                                                                              </shadow>
+                                                                                            </value>
+                                                                                            <next>
+                                                                                              <block type="rush_line_follow_junction" id="TMeLjQ0Py3(_GPsh8D:J">
+                                                                                                <field name="line">1</field>
+                                                                                                <field name="junction">2</field>
+                                                                                                <field name="action">leftatC</field>
+                                                                                                <comment pinned="false" h="80" w="160">end junction1</comment>
+                                                                                                <value name="Speed">
+                                                                                                  <block type="math_number" id="*_^L-E76XUlv%-3j1zru">
+                                                                                                    <field name="NUM">30</field>
+                                                                                                  </block>
+                                                                                                </value>
+                                                                                                <value name="Timer_forward">
+                                                                                                  <block type="math_number" id=")7,t4p[#:mrlc{6b?z-Y">
+                                                                                                    <field name="NUM">150</field>
+                                                                                                  </block>
+                                                                                                </value>
+                                                                                                <value name="Speed_action">
+                                                                                                  <block type="math_number" id="s:ED(kM1u7o)^o(|xvoR">
+                                                                                                    <field name="NUM">50</field>
+                                                                                                  </block>
+                                                                                                </value>
+                                                                                                <value name="Timer_action">
+                                                                                                  <block type="math_number" id="K4sICGGVlqlQuu#:87q|">
+                                                                                                    <field name="NUM">400</field>
+                                                                                                  </block>
+                                                                                                </value>
+                                                                                                <value name="Kp">
+                                                                                                  <block type="math_number" id="b!,n)#lK9c054/T*[?]i">
+                                                                                                    <field name="NUM">0.01</field>
+                                                                                                  </block>
+                                                                                                </value>
+                                                                                                <value name="Kd">
+                                                                                                  <block type="math_number" id=".{,w;VOPG/?0NomM(x^f">
+                                                                                                    <field name="NUM">0.02</field>
+                                                                                                  </block>
+                                                                                                </value>
+                                                                                                <next>
+                                                                                                  <block type="rush_line_follow_junction" id="iDN7bTmCJH{yIz^;gUr;">
+                                                                                                    <field name="line">1</field>
+                                                                                                    <field name="junction">1</field>
+                                                                                                    <field name="action">leftatC</field>
+                                                                                                    <comment pinned="false" h="80" w="160">end junction1</comment>
+                                                                                                    <value name="Speed">
+                                                                                                      <block type="math_number" id="o]68v+U#hiX~V7A;70`h">
+                                                                                                        <field name="NUM">50</field>
+                                                                                                      </block>
+                                                                                                    </value>
+                                                                                                    <value name="Timer_forward">
+                                                                                                      <block type="math_number" id="rNpBP~X]f-eE.8!pZTJW">
+                                                                                                        <field name="NUM">50</field>
+                                                                                                      </block>
+                                                                                                    </value>
+                                                                                                    <value name="Speed_action">
+                                                                                                      <block type="math_number" id=".NjXMQW/ZZ^N%OT?$+j7">
+                                                                                                        <field name="NUM">40</field>
+                                                                                                      </block>
+                                                                                                    </value>
+                                                                                                    <value name="Timer_action">
+                                                                                                      <block type="math_number" id="TlJ-QCY7gF9dWF]h6B6e">
+                                                                                                        <field name="NUM">200</field>
+                                                                                                      </block>
+                                                                                                    </value>
+                                                                                                    <value name="Kp">
+                                                                                                      <block type="math_number" id="RI7Z]9-lpWb7ArKqA_;y">
+                                                                                                        <field name="NUM">0.01</field>
+                                                                                                      </block>
+                                                                                                    </value>
+                                                                                                    <value name="Kd">
+                                                                                                      <block type="math_number" id="fPi+G.DnFKBU}|k,s1~u">
+                                                                                                        <field name="NUM">0.05</field>
+                                                                                                      </block>
+                                                                                                    </value>
+                                                                                                    <next>
+                                                                                                      <block type="rush_line_follow_junction" id="X,=/DgcnhbRo#anJvAq=">
+                                                                                                        <field name="line">1</field>
+                                                                                                        <field name="junction">2</field>
+                                                                                                        <field name="action">leftatC</field>
+                                                                                                        <comment pinned="false" h="80" w="160">last junction</comment>
+                                                                                                        <value name="Speed">
+                                                                                                          <block type="math_number" id="fdgYXPj6w/ibdSdtU*(W">
+                                                                                                            <field name="NUM">50</field>
+                                                                                                          </block>
+                                                                                                        </value>
+                                                                                                        <value name="Timer_forward">
+                                                                                                          <block type="math_number" id="*GfQ:9i,@#[5j2`h;[?T">
+                                                                                                            <field name="NUM">50</field>
+                                                                                                          </block>
+                                                                                                        </value>
+                                                                                                        <value name="Speed_action">
+                                                                                                          <block type="math_number" id="f!ZbjjU^s*:iL(n|VAJP">
+                                                                                                            <field name="NUM">100</field>
+                                                                                                          </block>
+                                                                                                        </value>
+                                                                                                        <value name="Timer_action">
+                                                                                                          <block type="math_number" id="M%9+rOUxf.B~gdm87Qo@">
+                                                                                                            <field name="NUM">200</field>
+                                                                                                          </block>
+                                                                                                        </value>
+                                                                                                        <value name="Kp">
+                                                                                                          <block type="math_number" id="/=IwP)fNRJhK^cp;^yE-">
+                                                                                                            <field name="NUM">0.01</field>
+                                                                                                          </block>
+                                                                                                        </value>
+                                                                                                        <value name="Kd">
+                                                                                                          <block type="math_number" id=")Kag@?(jSUp[x/9P5-q7">
+                                                                                                            <field name="NUM">0.02</field>
+                                                                                                          </block>
+                                                                                                        </value>
+                                                                                                        <next>
+                                                                                                          <block type="rush_line_follow_junction" id="8I[$=1W?sKr,tcq[T4.I">
+                                                                                                            <field name="line">1</field>
+                                                                                                            <field name="junction">0</field>
+                                                                                                            <field name="action">forward</field>
+                                                                                                            <comment pinned="false" h="80" w="160">end junction1</comment>
+                                                                                                            <value name="Speed">
+                                                                                                              <block type="math_number" id="w)p2P`[8ubHP!+H`Q!~e">
+                                                                                                                <field name="NUM">50</field>
+                                                                                                              </block>
+                                                                                                            </value>
+                                                                                                            <value name="Timer_forward">
+                                                                                                              <block type="math_number" id="V@}1^WiVeY;BnZmxL=1+">
+                                                                                                                <field name="NUM">50</field>
+                                                                                                              </block>
+                                                                                                            </value>
+                                                                                                            <value name="Speed_action">
+                                                                                                              <block type="math_number" id=".#=Ow/RX%}he,D9v6nxM">
+                                                                                                                <field name="NUM">50</field>
+                                                                                                              </block>
+                                                                                                            </value>
+                                                                                                            <value name="Timer_action">
+                                                                                                              <block type="math_number" id="n%Q6%BbUG7~P$mFWKY)]">
+                                                                                                                <field name="NUM">0</field>
+                                                                                                              </block>
+                                                                                                            </value>
+                                                                                                            <value name="Kp">
+                                                                                                              <block type="math_number" id="B)y$kGO~:twlGPMT$-`n">
+                                                                                                                <field name="NUM">0.01</field>
+                                                                                                              </block>
+                                                                                                            </value>
+                                                                                                            <value name="Kd">
+                                                                                                              <block type="math_number" id="HamhBEkum:ICdYhs:vrb">
+                                                                                                                <field name="NUM">0.02</field>
+                                                                                                              </block>
+                                                                                                            </value>
+                                                                                                            <next>
+                                                                                                              <block type="procedures_callnoreturn" id="U!BxW`q-d=M(U[8D3*9-">
+                                                                                                                <mutation xmlns="http://www.w3.org/1999/xhtml" name="grip_on_detect">
+                                                                                                                  <arg name="klas"></arg>
+                                                                                                                </mutation>
+                                                                                                                <value name="ARG0">
+                                                                                                                  <block type="variables_get" id="*og83r5RBvQbsP%b$91I">
+                                                                                                                    <field name="VAR" id="J!(B,gnrI?:Uo|LLdy(c">class2</field>
+                                                                                                                  </block>
+                                                                                                                </value>
+                                                                                                                <next>
+                                                                                                                  <block type="controls_forever" id="g{`T4bT5wJn^L3YW,H);">
+                                                                                                                    <statement name="DO">
+                                                                                                                      <block type="rush_stop" id="!OS)K;2WE_3OH,tr/5wn"/>
+                                                                                                                    </statement>
+                                                                                                                  </block>
+                                                                                                                </next>
+                                                                                                              </block>
+                                                                                                            </next>
+                                                                                                          </block>
+                                                                                                        </next>
+                                                                                                      </block>
+                                                                                                    </next>
+                                                                                                  </block>
+                                                                                                </next>
+                                                                                              </block>
+                                                                                            </next>
+                                                                                          </block>
+                                                                                        </next>
+                                                                                      </block>
+                                                                                    </next>
+                                                                                  </block>
+                                                                                </next>
+                                                                              </block>
+                                                                            </next>
+                                                                          </block>
+                                                                        </next>
+                                                                      </block>
+                                                                    </next>
+                                                                  </block>
+                                                                </next>
+                                                              </block>
+                                                            </next>
+                                                          </block>
+                                                        </next>
+                                                      </block>
+                                                    </next>
+                                                  </block>
+                                                </next>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
                                   </block>
                                 </next>
                               </block>
@@ -550,7 +986,7 @@
   </block>
   <block type="procedures_defnoreturn" id="*gqb1:dIljv0t%YP5KN6" x="1596" y="681">
     <mutation xmlns="http://www.w3.org/1999/xhtml">
-      <arg name="klas"></arg>
+      <arg name="klas" type="TEXT"></arg>
     </mutation>
     <field name="NAME">grip_on_detect</field>
     <comment pinned="false" h="80" w="160">Describe this function...</comment>
@@ -840,439 +1276,5 @@
         </next>
       </block>
     </statement>
-  </block>
-  <block type="rush_line_follow_junction" id="cEb7iM/1grMgDkH]?8wj" x="-602" y="1004">
-    <field name="line">1</field>
-    <field name="junction">0</field>
-    <field name="action">forward</field>
-    <comment pinned="false" h="80" w="160">end junction1</comment>
-    <value name="Speed">
-      <block type="math_number" id="b;Bj,WRrEb{Xq#RNX1,r">
-        <field name="NUM">50</field>
-      </block>
-    </value>
-    <value name="Timer_forward">
-      <block type="math_number" id="NY-b[=8GrF:tS*?2iVs#">
-        <field name="NUM">50</field>
-      </block>
-    </value>
-    <value name="Speed_action">
-      <block type="math_number" id="`^HLn]IssB)vo:ZQu!nW">
-        <field name="NUM">50</field>
-      </block>
-    </value>
-    <value name="Timer_action">
-      <block type="math_number" id="p_Zh@_5?MBLe..AsUTES">
-        <field name="NUM">0</field>
-      </block>
-    </value>
-    <value name="Kp">
-      <block type="math_number" id=")Os+]osx|Vma:Qk%=ywl">
-        <field name="NUM">0.01</field>
-      </block>
-    </value>
-    <value name="Kd">
-      <block type="math_number" id="`hGj=Nl}9nX7MedYP9G`">
-        <field name="NUM">0.02</field>
-      </block>
-    </value>
-    <next>
-      <block type="procedures_callnoreturn" id="(Xuuv]|nD-3jJIdpSXW%">
-        <mutation xmlns="http://www.w3.org/1999/xhtml" name="grip_on_detect">
-          <arg name="klas"></arg>
-        </mutation>
-        <value name="ARG0">
-          <block type="variables_get" id="v-u},VGDpn9.nKGe7[;(">
-            <field name="VAR" id="J!(B,gnrI?:Uo|LLdy(c">class2</field>
-          </block>
-        </value>
-        <next>
-          <block type="rush_drive" id="vYwum/6[+LTym+A~jL8L">
-            <field name="DIRL">backward</field>
-            <field name="DIRR">backward</field>
-            <value name="SPEEDL">
-              <block type="math_number" id="C%(wc@e.GK/{=SlI7,,q">
-                <field name="NUM">50</field>
-              </block>
-            </value>
-            <value name="SPEEDR">
-              <block type="math_number" id="%VO7Da.tk7F[vP:Qlv(;">
-                <field name="NUM">50</field>
-              </block>
-            </value>
-            <next>
-              <block type="base_delay" id="mw8w1{PX_ReLA%s*@^lm">
-                <value name="DELAY_TIME">
-                  <shadow type="math_number" id="1BJVmD+jF$x732*g6tNY">
-                    <field name="NUM">500</field>
-                  </shadow>
-                </value>
-                <next>
-                  <block type="rush_drive" id="]60w+@.U{iu^wAKs*+@I">
-                    <field name="DIRL">forward</field>
-                    <field name="DIRR">backward</field>
-                    <comment pinned="false" h="80" w="160">kanan</comment>
-                    <value name="SPEEDL">
-                      <block type="math_number" id="#^Y8QIV.Lzt$cWm3*^9#">
-                        <field name="NUM">60</field>
-                      </block>
-                    </value>
-                    <value name="SPEEDR">
-                      <block type="math_number" id="^L.7J5*cWO3xwpX|dvBc">
-                        <field name="NUM">50</field>
-                      </block>
-                    </value>
-                    <next>
-                      <block type="base_delay" id="L`L6;oEwdEUnvz4*-lu8">
-                        <value name="DELAY_TIME">
-                          <shadow type="math_number" id="p.%5JN$k9UP1K$JA=V36">
-                            <field name="NUM">400</field>
-                          </shadow>
-                        </value>
-                        <next>
-                          <block type="rush_line_follow_junction" id="kVKBy--U|v!tZ{(qiGO=">
-                            <field name="line">1</field>
-                            <field name="junction">1</field>
-                            <field name="action">leftatC</field>
-                            <comment pinned="false" h="80" w="160">end junction1</comment>
-                            <value name="Speed">
-                              <block type="math_number" id="Zif!iBR_$4+H[J*4V(Qx">
-                                <field name="NUM">50</field>
-                              </block>
-                            </value>
-                            <value name="Timer_forward">
-                              <block type="math_number" id="7Oxf(Atbeg#Zz0v*iuus">
-                                <field name="NUM">50</field>
-                              </block>
-                            </value>
-                            <value name="Speed_action">
-                              <block type="math_number" id="_LUUT;9`}aTUzfS@hISb">
-                                <field name="NUM">50</field>
-                              </block>
-                            </value>
-                            <value name="Timer_action">
-                              <block type="math_number" id=",CTBu+@vTUN7z}7K)f^8">
-                                <field name="NUM">50</field>
-                              </block>
-                            </value>
-                            <value name="Kp">
-                              <block type="math_number" id="ndH^s)`/u|Tl7CzkJwUh">
-                                <field name="NUM">0.01</field>
-                              </block>
-                            </value>
-                            <value name="Kd">
-                              <block type="math_number" id="xcoxD/{i%8q=XoZn;iTF">
-                                <field name="NUM">0.02</field>
-                              </block>
-                            </value>
-                            <next>
-                              <block type="rush_line_follow_junction" id="^BZmZ|=|tBgNnm:x,DU*">
-                                <field name="line">1</field>
-                                <field name="junction">0</field>
-                                <field name="action">leftatC</field>
-                                <comment pinned="false" h="80" w="160">end junction1</comment>
-                                <value name="Speed">
-                                  <block type="math_number" id=".Eq]x/Di9`/oO.AUY}Si">
-                                    <field name="NUM">45</field>
-                                  </block>
-                                </value>
-                                <value name="Timer_forward">
-                                  <block type="math_number" id="[OE]Ids=jP_Dy2rs#rst">
-                                    <field name="NUM">50</field>
-                                  </block>
-                                </value>
-                                <value name="Speed_action">
-                                  <block type="math_number" id="!MiRf*Pp;z?;CBZ];%_;">
-                                    <field name="NUM">50</field>
-                                  </block>
-                                </value>
-                                <value name="Timer_action">
-                                  <block type="math_number" id="NFnqkvs8,l)N=pg%z5X{">
-                                    <field name="NUM">200</field>
-                                  </block>
-                                </value>
-                                <value name="Kp">
-                                  <block type="math_number" id="zG.kn!MPRGJF*+fKn{a!">
-                                    <field name="NUM">0.01</field>
-                                  </block>
-                                </value>
-                                <value name="Kd">
-                                  <block type="math_number" id="$(Dr@|^M_y2lE+CiIB0N">
-                                    <field name="NUM">0.02</field>
-                                  </block>
-                                </value>
-                                <next>
-                                  <block type="rush_line_follow_junction" id="NGM-oL`}e3G@/qkAQPW}">
-                                    <field name="line">1</field>
-                                    <field name="junction">0</field>
-                                    <field name="action">forward</field>
-                                    <comment pinned="false" h="80" w="160">end junction1</comment>
-                                    <value name="Speed">
-                                      <block type="math_number" id="eg373BHNPyPBrKc=6S}5">
-                                        <field name="NUM">50</field>
-                                      </block>
-                                    </value>
-                                    <value name="Timer_forward">
-                                      <block type="math_number" id="Cz##.SuB|{jDIbgx}W{=">
-                                        <field name="NUM">50</field>
-                                      </block>
-                                    </value>
-                                    <value name="Speed_action">
-                                      <block type="math_number" id="L|~5WD6J{FzHVfJP]Ybn">
-                                        <field name="NUM">50</field>
-                                      </block>
-                                    </value>
-                                    <value name="Timer_action">
-                                      <block type="math_number" id="%Zc;.TSpAxM9Chh5LCiG">
-                                        <field name="NUM">0</field>
-                                      </block>
-                                    </value>
-                                    <value name="Kp">
-                                      <block type="math_number" id="iEW(84q!NIg+s/zPoy%Y">
-                                        <field name="NUM">0.01</field>
-                                      </block>
-                                    </value>
-                                    <value name="Kd">
-                                      <block type="math_number" id="?+N!gWke+*T-8l/NF:{V">
-                                        <field name="NUM">0.02</field>
-                                      </block>
-                                    </value>
-                                    <next>
-                                      <block type="procedures_callnoreturn" id="/q9c5w6*(.C3Md6*A{V4">
-                                        <mutation xmlns="http://www.w3.org/1999/xhtml" name="grip_on_detect">
-                                          <arg name="klas"></arg>
-                                        </mutation>
-                                        <value name="ARG0">
-                                          <block type="variables_get" id="/wXq(P,D2B-Jw8;dh]+_">
-                                            <field name="VAR" id="J!(B,gnrI?:Uo|LLdy(c">class2</field>
-                                          </block>
-                                        </value>
-                                        <next>
-                                          <block type="rush_drive" id="_w0({YI)4++LpPDOujI+">
-                                            <field name="DIRL">forward</field>
-                                            <field name="DIRR">backward</field>
-                                            <value name="SPEEDL">
-                                              <block type="math_number" id="79G.HG=qDppFop.Ni4RK">
-                                                <field name="NUM">50</field>
-                                              </block>
-                                            </value>
-                                            <value name="SPEEDR">
-                                              <block type="math_number" id="N{Tc3#CM`cM})YbR[Eux">
-                                                <field name="NUM">50</field>
-                                              </block>
-                                            </value>
-                                            <next>
-                                              <block type="base_delay" id="{$Uh!dk7$Kvg)~i$N[gS">
-                                                <value name="DELAY_TIME">
-                                                  <shadow type="math_number" id="4g.Ym},OR645[1=7?RSB">
-                                                    <field name="NUM">1008</field>
-                                                  </shadow>
-                                                </value>
-                                                <next>
-                                                  <block type="rush_stop" id="$Xpa8v/3CGS@Iob%!EzS">
-                                                    <next>
-                                                      <block type="base_delay" id="[njp}n;dr6torEjETpCg">
-                                                        <value name="DELAY_TIME">
-                                                          <shadow type="math_number" id="H#tj0$07/|Aa6J[fj4x+">
-                                                            <field name="NUM">1000</field>
-                                                          </shadow>
-                                                        </value>
-                                                        <next>
-                                                          <block type="rush_line_follow_junction" id="TMeLjQ0Py3(_GPsh8D:J">
-                                                            <field name="line">1</field>
-                                                            <field name="junction">2</field>
-                                                            <field name="action">leftatC</field>
-                                                            <comment pinned="false" h="80" w="160">end junction1</comment>
-                                                            <value name="Speed">
-                                                              <block type="math_number" id="*_^L-E76XUlv%-3j1zru">
-                                                                <field name="NUM">30</field>
-                                                              </block>
-                                                            </value>
-                                                            <value name="Timer_forward">
-                                                              <block type="math_number" id=")7,t4p[#:mrlc{6b?z-Y">
-                                                                <field name="NUM">150</field>
-                                                              </block>
-                                                            </value>
-                                                            <value name="Speed_action">
-                                                              <block type="math_number" id="s:ED(kM1u7o)^o(|xvoR">
-                                                                <field name="NUM">50</field>
-                                                              </block>
-                                                            </value>
-                                                            <value name="Timer_action">
-                                                              <block type="math_number" id="K4sICGGVlqlQuu#:87q|">
-                                                                <field name="NUM">400</field>
-                                                              </block>
-                                                            </value>
-                                                            <value name="Kp">
-                                                              <block type="math_number" id="b!,n)#lK9c054/T*[?]i">
-                                                                <field name="NUM">0.01</field>
-                                                              </block>
-                                                            </value>
-                                                            <value name="Kd">
-                                                              <block type="math_number" id=".{,w;VOPG/?0NomM(x^f">
-                                                                <field name="NUM">0.02</field>
-                                                              </block>
-                                                            </value>
-                                                            <next>
-                                                              <block type="rush_line_follow_junction" id="iDN7bTmCJH{yIz^;gUr;">
-                                                                <field name="line">1</field>
-                                                                <field name="junction">1</field>
-                                                                <field name="action">leftatC</field>
-                                                                <comment pinned="false" h="80" w="160">end junction1</comment>
-                                                                <value name="Speed">
-                                                                  <block type="math_number" id="o]68v+U#hiX~V7A;70`h">
-                                                                    <field name="NUM">50</field>
-                                                                  </block>
-                                                                </value>
-                                                                <value name="Timer_forward">
-                                                                  <block type="math_number" id="rNpBP~X]f-eE.8!pZTJW">
-                                                                    <field name="NUM">50</field>
-                                                                  </block>
-                                                                </value>
-                                                                <value name="Speed_action">
-                                                                  <block type="math_number" id=".NjXMQW/ZZ^N%OT?$+j7">
-                                                                    <field name="NUM">40</field>
-                                                                  </block>
-                                                                </value>
-                                                                <value name="Timer_action">
-                                                                  <block type="math_number" id="TlJ-QCY7gF9dWF]h6B6e">
-                                                                    <field name="NUM">200</field>
-                                                                  </block>
-                                                                </value>
-                                                                <value name="Kp">
-                                                                  <block type="math_number" id="RI7Z]9-lpWb7ArKqA_;y">
-                                                                    <field name="NUM">0.01</field>
-                                                                  </block>
-                                                                </value>
-                                                                <value name="Kd">
-                                                                  <block type="math_number" id="fPi+G.DnFKBU}|k,s1~u">
-                                                                    <field name="NUM">0.05</field>
-                                                                  </block>
-                                                                </value>
-                                                                <next>
-                                                                  <block type="rush_line_follow_junction" id="X,=/DgcnhbRo#anJvAq=">
-                                                                    <field name="line">1</field>
-                                                                    <field name="junction">2</field>
-                                                                    <field name="action">leftatC</field>
-                                                                    <comment pinned="false" h="80" w="160">last junction</comment>
-                                                                    <value name="Speed">
-                                                                      <block type="math_number" id="fdgYXPj6w/ibdSdtU*(W">
-                                                                        <field name="NUM">50</field>
-                                                                      </block>
-                                                                    </value>
-                                                                    <value name="Timer_forward">
-                                                                      <block type="math_number" id="*GfQ:9i,@#[5j2`h;[?T">
-                                                                        <field name="NUM">50</field>
-                                                                      </block>
-                                                                    </value>
-                                                                    <value name="Speed_action">
-                                                                      <block type="math_number" id="f!ZbjjU^s*:iL(n|VAJP">
-                                                                        <field name="NUM">100</field>
-                                                                      </block>
-                                                                    </value>
-                                                                    <value name="Timer_action">
-                                                                      <block type="math_number" id="M%9+rOUxf.B~gdm87Qo@">
-                                                                        <field name="NUM">200</field>
-                                                                      </block>
-                                                                    </value>
-                                                                    <value name="Kp">
-                                                                      <block type="math_number" id="/=IwP)fNRJhK^cp;^yE-">
-                                                                        <field name="NUM">0.01</field>
-                                                                      </block>
-                                                                    </value>
-                                                                    <value name="Kd">
-                                                                      <block type="math_number" id=")Kag@?(jSUp[x/9P5-q7">
-                                                                        <field name="NUM">0.02</field>
-                                                                      </block>
-                                                                    </value>
-                                                                    <next>
-                                                                      <block type="rush_line_follow_junction" id="8I[$=1W?sKr,tcq[T4.I">
-                                                                        <field name="line">1</field>
-                                                                        <field name="junction">0</field>
-                                                                        <field name="action">forward</field>
-                                                                        <comment pinned="false" h="80" w="160">end junction1</comment>
-                                                                        <value name="Speed">
-                                                                          <block type="math_number" id="w)p2P`[8ubHP!+H`Q!~e">
-                                                                            <field name="NUM">50</field>
-                                                                          </block>
-                                                                        </value>
-                                                                        <value name="Timer_forward">
-                                                                          <block type="math_number" id="V@}1^WiVeY;BnZmxL=1+">
-                                                                            <field name="NUM">50</field>
-                                                                          </block>
-                                                                        </value>
-                                                                        <value name="Speed_action">
-                                                                          <block type="math_number" id=".#=Ow/RX%}he,D9v6nxM">
-                                                                            <field name="NUM">50</field>
-                                                                          </block>
-                                                                        </value>
-                                                                        <value name="Timer_action">
-                                                                          <block type="math_number" id="n%Q6%BbUG7~P$mFWKY)]">
-                                                                            <field name="NUM">0</field>
-                                                                          </block>
-                                                                        </value>
-                                                                        <value name="Kp">
-                                                                          <block type="math_number" id="B)y$kGO~:twlGPMT$-`n">
-                                                                            <field name="NUM">0.01</field>
-                                                                          </block>
-                                                                        </value>
-                                                                        <value name="Kd">
-                                                                          <block type="math_number" id="HamhBEkum:ICdYhs:vrb">
-                                                                            <field name="NUM">0.02</field>
-                                                                          </block>
-                                                                        </value>
-                                                                        <next>
-                                                                          <block type="procedures_callnoreturn" id="U!BxW`q-d=M(U[8D3*9-">
-                                                                            <mutation xmlns="http://www.w3.org/1999/xhtml" name="grip_on_detect">
-                                                                              <arg name="klas"></arg>
-                                                                            </mutation>
-                                                                            <value name="ARG0">
-                                                                              <block type="variables_get" id="*og83r5RBvQbsP%b$91I">
-                                                                                <field name="VAR" id="J!(B,gnrI?:Uo|LLdy(c">class2</field>
-                                                                              </block>
-                                                                            </value>
-                                                                            <next>
-                                                                              <block type="controls_forever" id="g{`T4bT5wJn^L3YW,H);">
-                                                                                <statement name="DO">
-                                                                                  <block type="rush_stop" id="!OS)K;2WE_3OH,tr/5wn"/>
-                                                                                </statement>
-                                                                              </block>
-                                                                            </next>
-                                                                          </block>
-                                                                        </next>
-                                                                      </block>
-                                                                    </next>
-                                                                  </block>
-                                                                </next>
-                                                              </block>
-                                                            </next>
-                                                          </block>
-                                                        </next>
-                                                      </block>
-                                                    </next>
-                                                  </block>
-                                                </next>
-                                              </block>
-                                            </next>
-                                          </block>
-                                        </next>
-                                      </block>
-                                    </next>
-                                  </block>
-                                </next>
-                              </block>
-                            </next>
-                          </block>
-                        </next>
-                      </block>
-                    </next>
-                  </block>
-                </next>
-              </block>
-            </next>
-          </block>
-        </next>
-      </block>
-    </next>
   </block>
 </xml>

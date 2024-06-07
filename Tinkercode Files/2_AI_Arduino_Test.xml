@@ -812,7 +812,7 @@
   </block>
   <block type="procedures_defnoreturn" id="*gqb1:dIljv0t%YP5KN6" x="1596" y="681">
     <mutation xmlns="http://www.w3.org/1999/xhtml">
-      <arg name="klas"></arg>
+      <arg name="klas" type="TEXT"></arg>
     </mutation>
     <field name="NAME">grip_on_detect</field>
     <comment pinned="false" h="80" w="160">Describe this function...</comment>
